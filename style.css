@@ -20,7 +20,7 @@ main{
 .form-wrapper {
     display: flex;
     justify-content: space-between;
-    width: 800px;
+    width: 1000px;
     margin: auto;
     padding: 15px 0;
 }
@@ -28,6 +28,7 @@ main{
 .required {
     display: flex;
     align-items: center;
+    height: 30px;
     color: #fff;
     background: #C1272D;
     border-radius: 5px;
@@ -35,10 +36,15 @@ main{
     margin-left: 1em;
 }
 
+.validation-message{
+    color: red;
+}
+
 input,
 select,
 textarea{
     width: 600px;
+    display: block;
 }
 
 input{

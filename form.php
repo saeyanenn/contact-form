@@ -43,7 +43,10 @@ $subject_array = [
             <?php if ($value["required"]) : ?>
                 <span class="required">必須</span>
             <?php endif; ?>
-            <input id=<?= $key; ?> type=<?php echo $value["type"]; ?> name=<?= $key; ?> placeholder=<?= "例）&nbsp;" . $value["placeholder"] ?> required="<?= $value["required"]; ?>">
+            <div>
+                <input id=<?= $key; ?> type=<?= $value["type"]; ?> name=<?= $key; ?> placeholder=<?= "例）&nbsp;" . $value["placeholder"] ?> required="<?= $value["required"]; ?>">
+                <span id=<?= $key . "-validation" ?> class="validation-message"></span>
+            </div>
         </div>
     <?php } ?>
     <div class="form-wrapper">
@@ -56,7 +59,10 @@ $subject_array = [
     </div>
     <div class="form-wrapper">
         <label for="content">お問い合わせ内容</label>
-        <textarea name="content" id="content" cols="30" rows="10"></textarea>
+        <div>
+            <textarea name="content" id="content" cols="30" rows="10"></textarea>
+            <span id="content-validation" class="validation-message"></span>
+        </div>
     </div>
     <div class="button-wrapper">
         <button type="submit">
