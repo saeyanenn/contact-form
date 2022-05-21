@@ -26,8 +26,8 @@ $(function () {
             $("#tel-validation").text("電話番号にハイフンを含めないでください");
             return;
         }
-        if(telLength !== 12 || telLength !== 13){
-            $("#tel-validation").text("電話番号は12文字または13文字で入力してください")
+        if(telLength !== 10 || telLength !== 10){
+            $("#tel-validation").text("電話番号は10文字または11文字で入力してください")
         }
     });
     
