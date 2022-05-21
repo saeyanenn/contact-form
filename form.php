@@ -22,7 +22,7 @@ $input_array = [
     "tel" => [
         "label" => "電話番号",
         "type" => "tel",
-        "placeholder" => "090-1234-5678",
+        "placeholder" => "09012345678",
         "required" => false
     ],
 ];
@@ -36,7 +36,7 @@ $subject_array = [
 ];
 ?>
 
-<form action="" method="POST">
+<form action="./completed.php" method="POST">
     <?php foreach ($input_array as $key => $value) { ?>
         <div class="form-wrapper">
             <label for=<?= $key; ?>><?= $value["label"]; ?></label>

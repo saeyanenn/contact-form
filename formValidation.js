@@ -22,8 +22,8 @@ $(function () {
     $("#tel").on("blur", function(event){
         const telValue = event.target.value;
         const telLength = telValue.length;
-        if(telValue.indexOf('-') === -1){
-            $("#tel-validation").text("電話番号はハイフンを含めて入力してください");
+        if(telValue.indexOf('-') !== -1){
+            $("#tel-validation").text("電話番号にハイフンを含めないでください");
             return;
         }
         if(telLength !== 12 || telLength !== 13){
