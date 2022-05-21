@@ -73,3 +73,7 @@ button:hover{
     justify-content: center;
     padding-top: 50px;
 }
+
+.completed-message {
+    text-align: center;
+}
