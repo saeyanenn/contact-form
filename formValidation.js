@@ -43,7 +43,7 @@ $(function () {
             error_exit = true;
             return;
         }
-        if(telLength !== 10 || telLength !== 11){
+        if(telLength !== 10 && telLength !== 11){
             $("#tel-validation").text("電話番号は10文字または11文字で入力してください");
             error_exit = true;
             return;
