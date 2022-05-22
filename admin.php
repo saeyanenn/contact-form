@@ -1,5 +1,5 @@
 <?php
-
+include_once('./functions.php');
 $user = 'user';
 $pass = 'pass';
 
@@ -19,30 +19,7 @@ try {
     echo 'DB接続エラー！: ' . $th->getMessage();
     exit();
 }
-function addStyleBySubject($subject)
-{
-    switch ($subject) {
-        case '授業':
-            $subject_color = "class";
-            break;
-        case 'サークル':
-            $subject_color = "circle";
-            break;
-        case 'アルバイト':
-            $subject_color = "parttime-job";
-            break;
-        case '就職活動':
-            $subject_color = "job-hunting";
-            break;
-        case 'その他':
-            $subject_color = "other";
-            break;
-        default:
-            $subject_color = "default";
-            break;
-    }
-    return $subject_color;
-}
+
 ?>
 
 
@@ -57,18 +34,21 @@ function addStyleBySubject($subject)
     include_once("header.php");
     ?>
     <main>
+        <div class="content-data-box">
+            <?php foreach ($result as $value) {
+                $created_at = new DateTime($value["created_at"]);
+                $formatted_created_at =  $created_at->format('Y/m/d');
+            ?>
 
-        <?php foreach ($result as $value) {
-            $created_at = new DateTime($value["created_at"]);
-            $formatted_created_at =  $created_at->format('Y/m/d');
-        ?>
-            <a href="./contact_detail.php?id=<?= $value["id"]; ?>" class="contact-data">
-                <time><?= $formatted_created_at; ?></time>
-                <small class=<?= addStyleBySubject($subject) ?>><?= $subject; ?></small>
-                <span><?= $value["name"]; ?>さんからお問合せがありました！</span>
-            </a>
-            </div>
-        <?php }; ?>
+                <a href="./contact_detail.php?id=<?= $value["id"]; ?>" class="contact-data">
+                    <time><?= $formatted_created_at; ?></time>
+                    <small class=<?= addStyleBySubject($value["subject"]) ?>><?= $value["subject"]; ?></small>
+                    <span><?= $value["name"]; ?>さんからお問合せがありました！</span>
+                    </br>
+                </a>
+
+            <?php }; ?>
+        </div>
     </main>
 </body>
 
