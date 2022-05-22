@@ -1,3 +1,3 @@
 <header>
-    CONTACT FORM
+    <?= $header_text ?>
 </header>
