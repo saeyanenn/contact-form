@@ -26,7 +26,7 @@ if (strpos($tel, '-')) {
     array_push($errors, "電話番号にハイフンを含めないでください");
 }
 
-if (telLength !== 10 && telLength !== 11) {
+if (!10 <= mb_strlen($tel) <= 11) {
     array_push($errors, "電話番号は10文字または11文字で入力してください");
 }
 
