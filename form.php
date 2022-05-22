@@ -65,7 +65,7 @@ $subject_array = [
         </div>
     </div>
     <div class="button-wrapper">
-        <button type="submit" disabled="false" id="botton">
+        <button type="submit" disabled="true" id="submit-button">
             送信
         </button>
     </div>
