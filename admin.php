@@ -1,7 +1,7 @@
 <?php
 include_once('./functions.php');
-$user = 'user';
-$pass = 'pass';
+$user = 'sae';
+$pass = '428122';
 
 if (isset($_SERVER['PHP_AUTH_USER']) && ($_SERVER["PHP_AUTH_USER"] == $user && $_SERVER["PHP_AUTH_PW"] == $pass)) {
 } else {
@@ -43,7 +43,7 @@ try {
                 <a href="./contact_detail.php?id=<?= $value["id"]; ?>" class="contact-data">
                     <time><?= $formatted_created_at; ?></time>
                     <small class=<?= addStyleBySubject($value["subject"]) ?>><?= $value["subject"]; ?></small>
-                    <span><?= $value["name"]; ?>さんからお問合せがありました！</span>
+                    <span class='inform_sender'><?= $value["name"]; ?>さんからお問合せがありました！</span>
                     </br>
                 </a>
 
