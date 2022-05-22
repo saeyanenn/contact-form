@@ -1,4 +1,5 @@
 <?php
+ini_set('display_errors', 1);
 include_once("./database_connect.php");
 $name           = $_POST["name"];
 $email          = $_POST["email"];
@@ -26,7 +27,7 @@ if (strpos($tel, '-')) {
     array_push($errors, "電話番号にハイフンを含めないでください");
 }
 
-if (!10 <= mb_strlen($tel) <= 11) {
+if (mb_strlen($tel) < 10 ||  mb_strlen($tel) > 11) {
     array_push($errors, "電話番号は10文字または11文字で入力してください");
 }
 
@@ -61,7 +62,9 @@ $stmt->execute();
 <?php include_once("head.php") ?>
 
 <body>
-    <?php include_once("header.php"); ?>
+
+    <?php $header_text = "お問い合わせありがとうございます！";
+    include_once("./header.php"); ?>
     <main>
         <section>
             <h1 class="completed-message">送信完了しました！</h1>
