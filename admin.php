@@ -1,3 +1,14 @@
+<?php
+include_once("./database_connect.php");
+try {
+    $db_handler = connect_database();
+    $stamatent = $db_handler->prepare('SELECT * FROM Contact');
+    $stamatent->execute();
+    $result = $stamatent->fetchAll(PDO::FETCH_ASSOC);
+} catch (\Throwable $th) {
+    echo 'DB接続エラー！: ' . $th->getMessage();
+    exit();
+}
 function addStyleBySubject($subject)
 {
     switch ($subject) {
@@ -22,3 +33,33 @@ function addStyleBySubject($subject)
     }
     return $subject_color;
 }
+?>
+
+
+
+<!DOCTYPE html>
+<html lang="ja">
+<?php include_once("head.php") ?>
+
+<body>
+    <?php
+    $header_text = "お問い合わせ一覧";
+    include_once("header.php");
+    ?>
+    <main>
+
+        <?php foreach ($result as $value) {
+            $created_at = new DateTime($value["created_at"]);
+            $formatted_created_at =  $created_at->format('Y/m/d');
+        ?>
+            <div class="contact-data">
+                <time><?= $formatted_created_at; ?></time>
+                <small class=<?= addStyleBySubject($subject) ?>><?= $subject; ?></small>
+                <span><?= $value["name"]; ?>さんからお問合せがありました！</span>
+            </div>
+            </div>
+        <?php }; ?>
+    </main>
+</body>
+
+</html>
