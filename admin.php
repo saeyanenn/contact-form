@@ -52,11 +52,11 @@ function addStyleBySubject($subject)
             $created_at = new DateTime($value["created_at"]);
             $formatted_created_at =  $created_at->format('Y/m/d');
         ?>
-            <div class="contact-data">
+            <a href="./contact_detail.php?id=<?= $value["id"]; ?>" class="contact-data">
                 <time><?= $formatted_created_at; ?></time>
                 <small class=<?= addStyleBySubject($subject) ?>><?= $subject; ?></small>
                 <span><?= $value["name"]; ?>さんからお問合せがありました！</span>
-            </div>
+            </a>
             </div>
         <?php }; ?>
     </main>
