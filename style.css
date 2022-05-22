@@ -1,92 +1,196 @@
+.fa-leaf{
+  margin:0 10px;
+}
+
+
 body {
-    margin: 0
+  margin: 0;
 }
 
 header {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    padding: 30px 0;
-    font-weight: bold;
-    font-size: 30px;
-    background-color: skyblue;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  padding: 30px 0;
+  font-weight: bold;
+  font-size: 30px;
+  background-color: rgb(144, 222, 253);
+  /* background-image: url("https://miro.medium.com/max/1400/1*88f2yr8WT2x1v4Ct0ZImAA.png"); */
+  
 }
 
-main{
-    height: 100vh;
-    padding: 60px 50px;
+main {
+  height: 100vh;
+  padding: 60px 50px;
+  
 }
 
 .form-wrapper {
-    display: flex;
-    justify-content: space-between;
-    width: 1000px;
-    margin: auto;
-    padding: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  width: 1000px;
+  margin: auto;
+  padding: 15px 0;
 }
 
 .required {
-    display: flex;
-    align-items: center;
-    height: 30px;
-    color: #fff;
-    background: #C1272D;
-    border-radius: 5px;
-    padding: 0 10px;
-    margin-left: 1em;
+  display: flex;
+  align-items: center;
+  height: 30px;
+  color: #fff;
+  background: #c1272d;
+  border-radius: 5px;
+  padding: 0 10px;
+  margin-left: 1em;
 }
 
-.validation-message{
-    color: red;
+.validation-message {
+  color: red;
 }
 
 input,
 select,
-textarea{
-    width: 600px;
-    display: block;
+textarea {
+  width: 600px;
+  display: block;
 }
 
-input{
-    padding: 7px 2px;
+input {
+  padding: 7px 2px;
 }
 
 select {
-    height: 33px;
+  height: 33px;
 }
 
-
 button {
-    display       : inline-block;
-    border-radius : 5%;
-    font-size     : 18pt;
-    text-align    : center;
-    cursor        : pointer;
-    padding       : 12px 12px;
-    background    : #000066;
-    color         : #ffffff;
-    line-height   : 1em;
-    transition    : .3s;
-    border        : 2px solid #000066;
-  }
+  display: inline-block;
+  border-radius: 5%;
+  font-size: 18pt;
+  text-align: center;
+  cursor: pointer;
+  padding: 12px 12px;
+  background: #000066;
+  color: #ffffff;
+  line-height: 1em;
+  transition: 0.3s;
+  border: 2px solid #000066;
+}
 button:hover {
-    box-shadow    : none;
-    color         : #000066;
-    background    : #ffffff;
-  }
+  box-shadow: none;
+  color: #000066;
+  background: #ffffff;
+}
 
 .button-wrapper {
-    display: flex;
-    justify-content: center;
-    padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
 }
 
 .completed-message {
-    text-align: center;
+  text-align: center;
 }
 
-button:disabled{
-    background: #d4d4d4;
-    border: none;
-    color: #a7a7a7;
+button:disabled {
+  background: #d4d4d4;
+  border: none;
+  color: #a7a7a7;
 }
+
+.content-data-box {
+  width: 60%;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  margin: auto;
+}
+
+.contact-data {
+  text-decoration: none;
+  color: rgb(82, 80, 80);
+  display: flex;
+  align-content: center;
+  justify-content: center;
+
+  border-bottom: solid #a7a7a7;
+
+  padding-top: 15px;
+}
+
+.contact-data:hover {
+  color: firebrick;
+}
+
+time {
+  padding-right: 20px;
+}
+
+small {
+  padding: 0 10px;
+  color: white;
+  border-radius: 12px;
+  text-align: right;
+}
+
+small.class {
+  border: 1px solid rgb(128, 0, 0);
+  background-color: rgb(231 2 2);
+}
+
+.circle {
+  border: 1px solid green;
+  background-color: #00b800;
+}
+
+.parttime-job {
+  border: 1px solid rgb(0, 128, 122);
+  background-color: rgb(0 182 174);
+}
+
+.job-hunting {
+  border: 1px solid rgb(0, 2, 128);
+  background-color: rgb(12 16 237);
+}
+
+.other {
+  border: 1px solid rgb(128, 0, 111);
+  background-color: rgb(228 2 198);
+}
+
+.inform_sender {
+  padding-left: 20px;
+}
+
+.sender-data {
+  color: #c1272d;
+}
+
+.content-lead {
+  font-size: 20px;
+  text-align: center;
+}
+
+p.content-subject {
+  font-size: 28px;
+  padding: 20px;
+}
+
+.about-sender{
+  border-bottom: solid #a7a7a7;
+}
+
+.main-content{
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  color: #474747;
+  background: whitesmoke;/*背景色*/
+  border-left: double 7px #4ec4d3;/*左線*/
+  border-right: double 7px #4ec4d3;/*右線*/
+}
+.main-content p {
+  margin: 0; 
+  padding: 0;
+}
+
+

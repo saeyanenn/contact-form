@@ -32,9 +32,21 @@ $content = $contact_data["content"];
     include_once("header.php");
     ?>
     <main>
-        <?php
+        <div content-box>
+            <div class="content-lead">
+                <p class="about-sender">
+                    <span class=sender-data><?= $department ?></span>の<span class=sender-data><?= $name ?></span>さん
+                    （email:<span class=sender-data><?= $email ?></span class=sender-data>,tel :<span><?= $tel ?></span>）からのお問合せ。
+                </p>
+                <p class="content-subject">
+                    "<span class=sender-data><?= $subject ?></span>"について
+                </p>
+            </div>
+            <div class="main-content">
+                <p><?= $content ?></p>
+            </div>
+        </div>
 
-        ?>
     </main>
 </body>
 

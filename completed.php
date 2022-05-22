@@ -63,7 +63,7 @@ $stmt->execute();
 
 <body>
 
-    <?php $header_text = "お問い合わせありがとうございます！";
+    <?php $header_text = "お問い合わせありがとうございます!";
     include_once("./header.php"); ?>
     <main>
         <section>
