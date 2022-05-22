@@ -1,4 +1,14 @@
 <?php
+
+$user = 'user';
+$pass = 'pass';
+
+if (isset($_SERVER['PHP_AUTH_USER']) && ($_SERVER["PHP_AUTH_USER"] == $user && $_SERVER["PHP_AUTH_PW"] == $pass)) {
+} else {
+    header("WWW-Authenticate: Basic realm=\"basic\"");
+    header("HTTP/1.0 401 Unauthorized - basic");
+    exit();
+}
 include_once("./database_connect.php");
 try {
     $db_handler = connect_database();
