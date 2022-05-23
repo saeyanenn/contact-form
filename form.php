@@ -35,41 +35,42 @@ $subject_array = [
     "その他"
 ];
 ?>
-
-<form action="./completed.php" method="POST">
-    <?php foreach ($input_array as $key => $value) { ?>
+<div class="form_box">
+    <form action="./completed.php" method="POST">
+        <?php foreach ($input_array as $key => $value) { ?>
+            <div class="form-wrapper">
+                <label for=<?= $key; ?>><?= $value["label"]; ?></label>
+                <?php if ($value["required"]) : ?>
+                    <span class="required">必須</span>
+                <?php endif; ?>
+                <div>
+                    <input id=<?= $key; ?> type=<?= $value["type"]; ?> name=<?= $key; ?> placeholder=<?= "例）&nbsp;" . $value["placeholder"] ?> required="<?= $value["required"]; ?>">
+                    <span id=<?= $key . "-validation" ?> class="validation-message"></span>
+                </div>
+            </div>
+        <?php } ?>
         <div class="form-wrapper">
-            <label for=<?= $key; ?>><?= $value["label"]; ?></label>
-            <?php if ($value["required"]) : ?>
-                <span class="required">必須</span>
-            <?php endif; ?>
+            <label for="subject">件名</label>
+            <select name="subject" id="subject">
+                <?php foreach ($subject_array as $value) { ?>
+                    <option value=<?= $value; ?>><?= $value; ?></option>
+                <?php } ?>
+            </select>
+        </div>
+        <div class="form-wrapper">
+            <label for="content">お問い合わせ内容</label>
+            <span class="required">必須</span>
             <div>
-                <input id=<?= $key; ?> type=<?= $value["type"]; ?> name=<?= $key; ?> placeholder=<?= "例）&nbsp;" . $value["placeholder"] ?> required="<?= $value["required"]; ?>">
-                <span id=<?= $key . "-validation" ?> class="validation-message"></span>
+                <textarea name="content" id="content" cols="30" rows="10" required=true placeholder="＊1000文字以内"></textarea>
+                <span id="content-validation" class="validation-message"></span>
+                <span id="count-word"></span>
             </div>
         </div>
-    <?php } ?>
-    <div class="form-wrapper">
-        <label for="subject">件名</label>
-        <select name="subject" id="subject">
-            <?php foreach ($subject_array as $value) { ?>
-                <option value=<?= $value; ?>><?= $value; ?></option>
-            <?php } ?>
-        </select>
-    </div>
-    <div class="form-wrapper">
-        <label for="content">お問い合わせ内容</label>
-        <span class="required">必須</span>
-        <div>
-            <textarea name="content" id="content" cols="30" rows="10" required=true placeholder="＊1000文字以内"></textarea>
-            <span id="content-validation" class="validation-message"></span>
-            <span id="count-word"></span>
+        <div class="button-wrapper">
+            <button type="submit" disabled="true" id="submit-button">
+                送信
+            </button>
         </div>
-    </div>
-    <div class="button-wrapper">
-        <button type="submit" disabled="true" id="submit-button">
-            送信
-        </button>
-    </div>
 
-</form>
+    </form>
+</div>

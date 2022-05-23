@@ -19,10 +19,19 @@ header {
   
 }
 
+.header_text{
+  border-bottom: solid 3px cornflowerblue;
+}
+
 main {
   height: 100vh;
   padding: 60px 50px;
   
+}
+
+.form_box{
+  border:double 5px rgb(188 191 4 / 62%);
+  padding: 50px;
 }
 
 .form-wrapper {
