@@ -111,7 +111,5 @@ $(function () {
         $("#submit-button").prop("disabled", false);
       }
     }
-    
   });
-  
 });
