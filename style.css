@@ -69,6 +69,12 @@ textarea::placeholder{
   
 }
 
+#count-word{
+  color: #616161a1;
+  display: flex;
+  justify-content: flex-end;
+}
+
 button {
   display: inline-block;
   border-radius: 5%;
@@ -141,7 +147,7 @@ small {
 
 small.class {
   border: 1px solid rgb(128, 0, 0);
-  background-color: rgb(231 2 2);
+  background-color: rgb(245 48 48);
 }
 
 .circle {
@@ -151,7 +157,7 @@ small.class {
 
 .parttime-job {
   border: 1px solid rgb(0, 128, 122);
-  background-color: rgb(0 182 174);
+  background-color: rgb(5 213 204);
 }
 
 .job-hunting {
@@ -161,7 +167,7 @@ small.class {
 
 .other {
   border: 1px solid rgb(128, 0, 111);
-  background-color: rgb(228 2 198);
+  background-color: rgb(255 83 232);
 }
 
 .inform_sender {
@@ -199,7 +205,7 @@ p.content-subject {
 }
 
 .content-headline-class{
-  color: rgb(231 2 2);
+  color: rgb(245 48 48);
 }
 
 .content-headline-circle{
@@ -208,7 +214,7 @@ p.content-subject {
 
 .content-headline-parttime-job{
   
-  color: rgb(0 182 174);
+  color: rgb(5 213 204);
 }
 
 .content-headline-job-hunting{
