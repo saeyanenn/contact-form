@@ -63,6 +63,7 @@ $subject_array = [
         <div>
             <textarea name="content" id="content" cols="30" rows="10" required=true placeholder="＊1000文字以内"></textarea>
             <span id="content-validation" class="validation-message"></span>
+            <span id="count-word"></span>
         </div>
     </div>
     <div class="button-wrapper">

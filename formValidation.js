@@ -94,6 +94,8 @@ $(function () {
 
   $("#content").on("blur", function (event) {
     const contentLength = event.target.value.length;
+    $("#count-word").text(`＜${contentLength}文字＞`);
+    console.log(contentLength);
     if (contentLength > 1000) {
       $("#content-validation").text(
         "お問い合わせ内容は1000文字以内で入力してください"
@@ -109,5 +111,7 @@ $(function () {
         $("#submit-button").prop("disabled", false);
       }
     }
+    
   });
+  
 });
