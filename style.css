@@ -63,6 +63,12 @@ select {
   height: 33px;
 }
 
+
+textarea::placeholder{
+  text-align: right;
+  
+}
+
 button {
   display: inline-block;
   border-radius: 5%;

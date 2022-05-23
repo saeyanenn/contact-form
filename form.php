@@ -61,7 +61,7 @@ $subject_array = [
         <label for="content">お問い合わせ内容</label>
         <span class="required">必須</span>
         <div>
-            <textarea name="content" id="content" cols="30" rows="10" required=true></textarea>
+            <textarea name="content" id="content" cols="30" rows="10" required=true placeholder="＊1000文字以内"></textarea>
             <span id="content-validation" class="validation-message"></span>
         </div>
     </div>
