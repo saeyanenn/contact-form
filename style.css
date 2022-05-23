@@ -15,7 +15,7 @@ header {
   font-weight: bold;
   font-size: 30px;
   background-color: rgb(144, 222, 253);
-  /* background-image: url("https://miro.medium.com/max/1400/1*88f2yr8WT2x1v4Ct0ZImAA.png"); */
+  
   
 }
 
@@ -184,13 +184,31 @@ p.content-subject {
   padding: 0.5em 1em;
   margin: 2em 0;
   color: #474747;
-  background: whitesmoke;/*背景色*/
-  border-left: double 7px #4ec4d3;/*左線*/
-  border-right: double 7px #4ec4d3;/*右線*/
+  background: whitesmoke;
+  border-left: double 7px #4ec4d3;
 }
 .main-content p {
   margin: 0; 
   padding: 0;
 }
 
+.content-headline-class{
+  color: rgb(231 2 2);
+}
 
+.content-headline-circle{
+  color:#00b800;
+}
+
+.content-headline-parttime-job{
+  
+  color: rgb(0 182 174);
+}
+
+.content-headline-job-hunting{
+  color: rgb(12 16 237);
+}
+
+.content-headline-other{
+  color: rgb(228 2 198);
+}

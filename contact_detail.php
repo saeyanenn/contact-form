@@ -12,6 +12,8 @@ try {
     exit();
 }
 
+include_once('functions.php');
+
 $contact_data = $result[0];
 $name = $contact_data["name"];
 $email = $contact_data["email"];
@@ -20,7 +22,11 @@ $subject = $contact_data["subject"];
 $tel = $contact_data["tel"];
 $content = $contact_data["content"];
 
+
+
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="ja">
@@ -36,10 +42,10 @@ $content = $contact_data["content"];
             <div class="content-lead">
                 <p class="about-sender">
                     <span class=sender-data><?= $department ?></span>の<span class=sender-data><?= $name ?></span>さん
-                    （email:<span class=sender-data><?= $email ?></span class=sender-data>,tel :<span><?= $tel ?></span>）からのお問合せ。
+                    （email:<span class=sender-data><?= $email ?></span class=sender-data>,tel :<span class=sender-data><?= $tel ?></span>）からのお問合せ。
                 </p>
                 <p class="content-subject">
-                    "<span class=sender-data><?= $subject ?></span>"について
+                    "<span class=content-headline-<?= addStyleBySubject($subject) ?>><?= $subject ?></span>"について
                 </p>
             </div>
             <div class="main-content">
